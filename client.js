@@ -5,19 +5,20 @@
 //
 
 
-function conditionalsTest (num1, num2) {
-  if (num1 > num2) {
-    var message = "The first number is bigger";
-    return message;
-  } else if (num1 < num2) {
+function conditionalsTest (num1, num2) { //we take in two numbers
+
+  if (parseFloat(num1) > parseFloat(num2)) { //we compare the numbers, making sure that the function will run with any sort of number or string-containing-a-number is present.
+    var message = "The first number is bigger"; //The message we want to return
+  } else if (parseFloat(num1) < parseFloat(num2)) {
     var message = "The second number is bigger";
-    return message;
-  } else {
-    var message = "Both numbers are the same"
-    return message;
+  } else if (parseFloat(num1) == parseFloat(num2)){
+    var message = "Both numbers are the same";
   }
+  return message; //here we return whatever message was set based on the logic of the comparisons. 
 }
 
 console.log(conditionalsTest(1,2));
 console.log(conditionalsTest(2,1));
 console.log(conditionalsTest(7,7));
+console.log(conditionalsTest(5.3, 6.8));
+console.log(conditionalsTest(3.6, '8.34 phi'));
